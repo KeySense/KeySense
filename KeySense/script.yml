@@ -1,0 +1,9 @@
+scripts:
+  - trigger: "1"
+    replace: "uno"
+
+  - trigger: "2"
+    replace: "DOS"
+
+  - trigger: "3"
+    replace: "tres"
