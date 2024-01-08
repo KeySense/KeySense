@@ -2,13 +2,13 @@
 # License: BSD 3 clause
 
 from pathlib import Path
-from customtkinter import *
+import customtkinter as ctk
 import yaml
 import json
 
 
 class Client:
-    def __init__(self):
+    def __init__(self, appearance="System", theme="blue"):
         self.KeySense = Path(__file__).parents[1]
 
         # Configuration files
@@ -16,28 +16,38 @@ class Client:
             self.language = json.load(cfg)["DefaultLanguage"]
 
         # Scripts
-        with open(self.KeySense / "script.yml", "r") as scripts:
+        with open(self.KeySense / "Script.yml", "r") as scripts:
             self.scripts = yaml.full_load(scripts)["scripts"]
             self.script_triggers = [script["trigger"] for script in self.scripts]
             self.script_replacers = [script["replace"] for script in self.scripts]
 
+        # Client
+        self.app = ctk.CTk()
+
         # Client settings
-        self.app = CTk()
+        self.appearance_theme = ctk.set_appearance_mode(appearance)
+        self.color_theme = ctk.set_default_color_theme(theme)
         self.RESOLUTION = "1280x720"
         self.app.geometry(self.RESOLUTION)
 
-    def application(self):
-        CTkButton(master=self.app, text="KeySense", corner_radius=32).place(
-            relx=0.5, rely=0.5, anchor="center"
+    def menu_selection(self, option):
+        print(f"User selection: {option}")
+
+    def elements(self):
+        # Option menu
+        option_menu = ctk.CTkOptionMenu(
+            master=self.app, values=["Scripts", "Options"], command=self.menu_selection
         )
+        option_menu.set("Option 1")
+        option_menu.place()
 
-    def display_app(self):
-        # Refresh application
-        self.application()
+    def create(self):
+        # Render Client Elements
+        self.elements()
 
-        # Display application
+        # Display Client
         self.app.mainloop()
 
 
 if __name__ == "__main__":
-    Client().display_app()
+    Client().create()

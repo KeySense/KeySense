@@ -7,9 +7,7 @@
     <list default="true" id="cf3e899f-1faf-4b67-bab0-5db9cd52c5d7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KeySense/Client/Client.py" beforeDir="false" afterPath="$PROJECT_DIR$/KeySense/Client/Client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KeySense/Client/cfg.json" beforeDir="false" afterPath="$PROJECT_DIR$/KeySense/Client/cfg.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KeySense/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/KeySense/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KeySense/script.yml" beforeDir="false" afterPath="$PROJECT_DIR$/KeySense/script.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KeySense/script.yml" beforeDir="false" afterPath="$PROJECT_DIR$/KeySense/Script.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,16 +35,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Client.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Client.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\liams\Dropbox\Coding\KeySense\KeySense\Client" />
