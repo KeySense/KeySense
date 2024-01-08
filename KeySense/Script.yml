@@ -1,9 +1,9 @@
 scripts:
-  - trigger: "1"
-    replace: "uno"
+  - trigger: "nombre"
+    replace: "LIAM"
 
-  - trigger: "2"
-    replace: "DOS"
+  - trigger: "apellido"
+    replace: "ARGUEDAS"
 
-  - trigger: "3"
-    replace: "tres"
+  - trigger: "ramirez"
+    replace: "segundo_apellido"
