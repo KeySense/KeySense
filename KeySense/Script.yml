@@ -1,8 +1,8 @@
 scripts:
-  - trigger: "nombre"
-    replace: "LIAM"
+  - trigger: "email"
+    replace: "iliamftw2013@gmail.com"
 
-  - trigger: "apellido"
+  - trigger: "apell'ido"
     replace: "ARGUEDAS"
 
   - trigger: "ramirez"

@@ -15,30 +15,38 @@ class OSSense:
             self.scripts = yaml.full_load(scripts)["scripts"]
             self.script_triggers = [script["trigger"] for script in self.scripts]
             self.script_replacers = [script["replace"] for script in self.scripts]
+            self.script_map = {
+                item["trigger"]: item["replace"] for item in self.scripts
+            }
 
         # Listener
-        self.key_pressed = list()
+        self.keys_pressed = list()
+
+    def clear_cache(self):
+        self.keys_pressed.clear()
 
     def trigger_script(self, trigger):
         # max_trigger_len = max([len(trigger) for trigger in self.script_triggers])
         print(trigger)
+        print(self.script_map[trigger])
+        self.clear_cache()
 
     def capture_trigger(self, key):
-        self.key_pressed.append(str(key).replace("'", ""))
-        trigger_lens = [len(trigger) for trigger in self.script_triggers]
-        for len_trigger in trigger_lens:
-            print(self.key_pressed[-len_trigger:])
-            print("".join(self.key_pressed[-len_trigger:]))
+        if key == keyboard.Key.space:
+            self.clear_cache()
+            print(self.keys_pressed)
 
-            try:
-                if "".join(self.key_pressed[-len_trigger:]) in self.script_triggers:
-                    self.trigger_script(
-                        trigger="".join(self.key_pressed[-len_trigger:])
-                    )
-            except Exception as OutOfIndex:
-                continue
+        else:
+            print(self.keys_pressed)
+            self.keys_pressed.append(str(key).replace("'", ""))
+
+            if "".join(self.keys_pressed) in [
+                trigger for trigger in self.script_triggers
+            ]:
+                self.trigger_script(trigger="".join(self.keys_pressed))
 
     def listener(self):
+        self.clear_cache()
         with keyboard.Listener(on_press=self.capture_trigger) as listener:
             listener.join()
 
