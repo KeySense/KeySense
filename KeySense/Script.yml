@@ -2,8 +2,5 @@ scripts:
   - trigger: "email"
     replace: "iliamftw2013@gmail.com"
 
-  - trigger: "apell'ido"
-    replace: "ARGUEDAS"
-
-  - trigger: "ramirez"
-    replace: "segundo_apellido"
+  - trigger: "importlib"
+    replace: "import numpy as np\nimport pandas as pd\nimport statsmodels.api as sm\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport warnings\nimport chart_studio.plotly as py\nimport plotly.graph_objs as go\nfrom plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot\nwarnings.filterwarnings('ignore')\nsns.set_style('whitegrid')\nsns.set(rc={'figure.figsize':(9,6)})\npd.set_option('display.max_columns', None)\npd.set_option('display.max_rows', None)\ninit_notebook_mode(connected=True)\n%matplotlib inline"
