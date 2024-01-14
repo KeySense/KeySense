@@ -1,27 +1,29 @@
 # Authors: Liam Arguedas <iliamftw2013@gmail.com>
 # License: BSD 3 clause
 
-from pathlib import Path
 from pynput.keyboard import Listener, Key, Controller
+from Languages import sense_es_la1, sense_pt_br, sense_lan
+from pathlib import Path
+
 import yaml
 import string
 
 
 class OSSense:
-    def __init__(self):
+    def __init__(self, scripts_path=None):
         self.KeySense = Path(__file__).parents[1]
 
         # Scripts
-        with open(self.KeySense / "Script.yml", "r") as scripts:
+        if scripts_path is None:
+            scripts_path = self.KeySense / "Script.yml"
+
+        with open(scripts_path, "r", encoding="utf-8") as scripts:
             self.scripts = yaml.full_load(scripts)["scripts"]
-            self.script_triggers = [script["trigger"] for script in self.scripts]
-            self.script_replacers = [script["replacer"] for script in self.scripts]
-            self.script_map = {
-                item["trigger"]: item["replacer"] for item in self.scripts
-            }
-            self.script_triggers_len = [
-                len(trigger) for trigger in self.script_triggers
-            ]
+
+        self.script_triggers = [script["trigger"] for script in self.scripts]
+        self.script_replacers = [script["replacer"] for script in self.scripts]
+        self.script_map = {item["trigger"]: item["replacer"] for item in self.scripts}
+        self.script_triggers_len = [len(trigger) for trigger in self.script_triggers]
 
         # Listener
         self.keys_pressed = list()
@@ -30,22 +32,38 @@ class OSSense:
 
         # Keyboard actions
         self.keyboard = Controller()
-        self.NEWLINE_MAP = "^"  # If in 'replacer', generates new line
-        self.TAB_MAP = "~"  # If in 'replacer', generates 4 spaces line
+        (
+            self.NEWLINE_MAP,
+            self.TAB_MAP,
+        ) = sense_lan()  # If in 'replacer', generates 4 spaces line
 
-    def clear_cache(self):
-        self.keys_pressed.clear()
+        # Language specific
+        self.special_letters_es_la1 = sense_es_la1()
+        self.special_letters_pt = sense_pt_br()
 
     @staticmethod
     def key_to_str(key):
         return str(key).replace("'", "")
 
+    def clear_cache(self):
+        self.keys_pressed.clear()
+
     def simulate_key(self, key):
         self.keyboard.press(key)
         self.keyboard.release(key)
 
+    def is_trigger(self, key):
+        if (key in self.hotkey_trigger) or (key in self.replacer_trigger):
+            return True
+        return False
+
     def is_special_action(self, letter):
         return letter in [self.NEWLINE_MAP, self.TAB_MAP]
+
+    def is_lan_specific_letter(self, letter):
+        if letter in self.special_letters_pt or letter in self.special_letters_es_la1:
+            return True
+        return False
 
     def execute_special_action(self, letter):
         if letter == self.NEWLINE_MAP:
@@ -53,11 +71,6 @@ class OSSense:
         if letter == self.TAB_MAP:
             for _ in range(4):
                 self.simulate_key(Key.tab)
-
-    def is_trigger(self, key):
-        if (key in self.hotkey_trigger) or (key in self.replacer_trigger):
-            return True
-        return False
 
     def trigger_hotkey_script(self):
         self.clear_cache()
@@ -71,6 +84,10 @@ class OSSense:
         for letter in text:
             if self.is_special_action(letter):
                 self.execute_special_action(letter)
+
+            if self.is_lan_specific_letter(letter):
+                pass  # TODO
+
             else:
                 self.simulate_key(letter)
 
