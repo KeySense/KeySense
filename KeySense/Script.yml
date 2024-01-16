@@ -8,4 +8,11 @@ scripts:
   - trigger: "test3"
     replacer: "This is a text containing text in different lines and tab simulations^~This is line number One with one Tab^~~This is line number two with two tabs"
 
+  - trigger: "test4"
+    replacer: "Esto es un test en español, creado para testear diferentes acentos como: á é í ó ú ñ Á É Í Ó Ú Ñ"
 
+  - trigger: "test5"
+    replacer: "Aqui um teste em português com o objetivo de testar os diferentes acentos da língua, tais que: á Á é É í Í ó Ó ú Ú â Â ê Ê î Î ô Ô û Û ã Ã õ Õ ç Ç"
+
+  - trigger: "ez"
+    replacer: "EXAGERADAMENTE FACIL"

@@ -65,12 +65,28 @@ class OSSense:
             return True
         return False
 
+    def type_with_tilde(self, letter):
+        self.keyboard.press(Key.alt_gr)
+        self.simulate_key(letter)
+        self.keyboard.release(Key.alt_gr)
+
     def execute_special_action(self, letter):
         if letter == self.NEWLINE_MAP:
             self.simulate_key(Key.enter)
         if letter == self.TAB_MAP:
             for _ in range(4):
                 self.simulate_key(Key.tab)
+
+    def execute_lan_specific_letter(self, letter):
+        if letter in self.special_letters_es_la1:
+            # If letter is Ñ or ñ
+            if (
+                letter == self.special_letters_es_la1[-2]
+                or letter == self.special_letters_es_la1[-1]
+            ):
+                pass
+            else:
+                self.type_with_tilde(letter)
 
     def trigger_hotkey_script(self):
         self.clear_cache()
@@ -86,7 +102,7 @@ class OSSense:
                 self.execute_special_action(letter)
 
             if self.is_lan_specific_letter(letter):
-                pass  # TODO
+                self.execute_lan_specific_letter(letter)
 
             else:
                 self.simulate_key(letter)
