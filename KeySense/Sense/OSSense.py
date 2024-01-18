@@ -65,7 +65,9 @@ class OSSense:
             return True
         return False
 
-    def type_with_tilde(self, letter):
+    def type_with_tilde_enye_cedilla(self, letter):
+        # Executes tilde, enye (ñ) and C cedilla (ç)
+
         self.keyboard.press(Key.alt_gr)
         self.simulate_key(letter)
         self.keyboard.release(Key.alt_gr)
@@ -78,15 +80,9 @@ class OSSense:
                 self.simulate_key(Key.tab)
 
     def execute_lan_specific_letter(self, letter):
-        if letter in self.special_letters_es_la1:
-            # If letter is Ñ or ñ
-            if (
-                letter == self.special_letters_es_la1[-2]
-                or letter == self.special_letters_es_la1[-1]
-            ):
-                pass
-            else:
-                self.type_with_tilde(letter)
+                # TODO 
+                self.type_with_tilde_enye_cedilla(letter)
+                self.type_with_tilde_enye_cedilla(letter)
 
     def trigger_hotkey_script(self):
         self.clear_cache()
