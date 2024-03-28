@@ -80,9 +80,9 @@ class OSSense:
                 self.simulate_key(Key.tab)
 
     def execute_lan_specific_letter(self, letter):
-                # TODO 
-                self.type_with_tilde_enye_cedilla(letter)
-                self.type_with_tilde_enye_cedilla(letter)
+        # TODO
+        self.type_with_tilde_enye_cedilla(letter)
+        self.type_with_tilde_enye_cedilla(letter)
 
     def trigger_hotkey_script(self):
         self.clear_cache()
@@ -96,9 +96,11 @@ class OSSense:
         for letter in text:
             if self.is_special_action(letter):
                 self.execute_special_action(letter)
+                break
 
             if self.is_lan_specific_letter(letter):
                 self.execute_lan_specific_letter(letter)
+                break
 
             else:
                 self.simulate_key(letter)
