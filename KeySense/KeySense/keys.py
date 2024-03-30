@@ -2,14 +2,14 @@
 # License: BSD 3 clause
 
 from pynput.keyboard import Listener, Key, Controller
-from Languages import sense_es_la1, sense_pt_br, sense_lan
+from .utils.langs import sense_es_la1, sense_pt_br, sense_lan
 from pathlib import Path
 
 import yaml
 import string
 
 
-class OSSense:
+class KeyboardSense:
     def __init__(self, scripts_path=None):
         self.KeySense = Path(__file__).parents[1]
 
@@ -133,7 +133,3 @@ class OSSense:
         self.clear_cache()
         with Listener(on_press=self.capture_trigger) as listener:
             listener.join()
-
-
-if __name__ == "__main__":
-    OSSense().listener()
