@@ -41,5 +41,5 @@ KeySense is a freely available, open-source software crafted during our limited 
 
 ## License
 
-extralearning was created by [Liam Arguedas](https://github.com/liamarguedas)
+KeySense was created by [Liam Arguedas](https://github.com/liamarguedas)
 and is licensed under the [GPL-3.0 license](/LICENSE).
