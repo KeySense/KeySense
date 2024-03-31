@@ -52,3 +52,7 @@ def sense_pt_br() -> list[str]:
 
 def sense_lan() -> tuple:
     return "^", "~"
+
+
+def hotkey_lan() -> tuple:
+    return "!", "+", "#"

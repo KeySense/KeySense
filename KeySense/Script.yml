@@ -1,27 +1,19 @@
 scripts:
-  - trigger: "test1"
+  - trigger: "t1"
     replacer: "This is a test of plain text!"
 
-  - trigger: "test2"
+  - trigger: "t2"
     replacer: "This is a text containing text in different lines^This is line number One^This is line number two"
 
-  - trigger: "test3"
+  - trigger: "t3"
     replacer: "This is a text containing text in different lines and tab simulations^~This is line number One with one Tab^~~This is line number two with two tabs"
 
-  - trigger: "test4"
+  - trigger: "t4"
     replacer: "Esto es un test en español, creado para testear diferentes acentos como: á é í ó ú ñ Á É Í Ó Ú Ñ"
 
-  - trigger: "test5"
+  - trigger: "t5"
     replacer: "Aqui um teste em português com o objetivo de testar os diferentes acentos da língua, tais que: á Á é É í Í ó Ó ú Ú â Â ê Ê î Î ô Ô û Û ã Ã õ Õ ç Ç"
 
-  - trigger: "teste"
-    replacer: "Hello World!"
+  - hotkey: ""
+    do: ""
 
-  - trigger: "sc1"
-    replacer: "EXAGERADAMENTE FACIL^/all IMMESURABLEMENTE FACIL^/all SENCILLO AL CUBO^/all YO>LAS"
-    
-  - trigger: "sc2"
-    replacer: "IMMESURABLEMENTE FACIL"
-    
-  - trigger: "sc3"
-    replacer: "SENCILLO AL CUBO"
