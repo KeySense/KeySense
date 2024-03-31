@@ -5,5 +5,5 @@ from KeySense import KeyboardSense
 
 if __name__ == "__main__":
 
-    keyboard = KeyboardSense
+    keyboard = KeyboardSense()
     keyboard.listener()
