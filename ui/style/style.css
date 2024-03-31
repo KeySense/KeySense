@@ -1,0 +1,31 @@
+body {
+  background-color: #ededed;
+}
+
+.top-menu {
+  height: 130px;
+  width: 1280px;
+  background-color: white;
+  padding: 0px;
+}
+
+.side-menu {
+  height: 445px;
+  width: 130px;
+  background-color: white;
+  padding: 0px;
+}
+
+.large {
+  width: 300px;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 250px;
+  background-color: black;
+}
