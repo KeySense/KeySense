@@ -1,12 +1,12 @@
 # Authors: Liam Arguedas <iliamftw2013@gmail.com>
 # License: BSD 3 clause
 
-from pynput.keyboard import Listener, Key, Controller
-from .utils.langs import sense_es_la1, sense_pt_br, sense_lan, hotkey_lan
 from pathlib import Path
-
+from pynput.keyboard import Listener, Key, Controller
 import yaml
 import string
+
+from .utils.langs import sense_es_la1, sense_pt_br, sense_lan, hotkey_lan
 
 
 class KeyboardSense:
