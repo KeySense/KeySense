@@ -1,9 +1,9 @@
 {
-  "scripts": {
-    "tauri": "tauri"
-  },
   "devDependencies": {
     "@tauri-apps/cli": "^1.5.11"
+  },
+  "scripts": {
+    "tauri": "tauri"
   },
   "dependencies": {
     "bootstrap": "^5.3.3"

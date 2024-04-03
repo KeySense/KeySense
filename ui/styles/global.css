@@ -1,14 +1,10 @@
 :root {
-  --white: #ffffff;
-  --grey-accent: #ededed;
-  --grey: #bfbebe;
+  --header-color: #ffffff;
+  --background-color: #ededed;
+  --grey: #d9d9d9;
+  --dark-grey: #a9a9a9;
   --black: #000000;
-}
-
-/* Global */
-
-body {
-  background-color: var(--grey-accent);
+  --black-opaccity-25: #00000025;
 }
 
 /* Header */
@@ -18,7 +14,7 @@ header {
   width: 100%;
   max-width: 1280px;
   padding: 0 20px;
-  background-color: var(--white);
+  background-color: var(--header-color);
 
   display: flex;
   flex-direction: row;
@@ -43,8 +39,8 @@ header .wrapper #switch {
 }
 
 header .wrapper #switch button {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   background-color: var(--black);
   border: none;
   border-radius: 50%;
@@ -58,13 +54,20 @@ header .wrapper #switch button {
   animation: slide-back 0.2s;
 }
 
+/* header .dark .wrapper .switch-wrapper #switch button {
+  right: 0;
+  left: initial;
+
+  animation: slide-in 0.4s forwards;
+} */
+
 #switch button:hover {
   cursor: pointer;
 }
 
 #switch span {
   display: block;
-  width: 56px;
+  width: 50px;
   height: 25px;
   background: var(--grey);
   backdrop-filter: blur(4px);
@@ -99,5 +102,63 @@ header .wrapper .profile-btn {
 }
 
 header .wrapper .profile-btn i {
-  font-size: 30px;
+  font-size: 25px;
+}
+
+/* Content */
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--background-color);
+
+  padding: 130px 40px 0;
+}
+
+.content .box {
+  width: 200px;
+  height: 200px;
+  background-color: var(--grey);
+  border-radius: 16px;
+  box-shadow: 0 4px 4px var(--black-opaccity-25);
+  border: 1px solid var(--dark-grey);
+  padding: 34px 0;
+  font-weight: 600;
+  font-size: 18px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .box:hover {
+  cursor: pointer;
+  scale: 1.05;
+}
+
+.content .box i {
+  font-size: 90px;
+}
+
+/* animations */
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
