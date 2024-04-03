@@ -57,9 +57,10 @@
       {
         "fullscreen": false,
         "height": 600,
-        "resizable": true,
+        "resizable": false,
         "title": "KeySense",
-        "width": 1280
+        "width": 1280,
+        "decorations": true
       }
     ]
   }
