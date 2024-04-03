@@ -30,13 +30,13 @@ body {
 
 .top-menu .menu {
   color: var(--black);
-  font-size: 60px;
+  font-size: 40px;
   margin-top: 10px;
 }
 
 .top-menu img {
-  width: 300px;
-  margin-right: 500px;
+  width: 200px;
+  margin-right: 600px;
 }
 
 .top-menu .search-box {
@@ -64,7 +64,7 @@ body {
 
 .side-menu a {
   color: var(--black);
-  font-size: 60px;
+  font-size: 40px;
 
   display: flex;
   flex-direction: column;
