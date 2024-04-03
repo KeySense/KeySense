@@ -7,6 +7,10 @@
   --black-opaccity-25: #00000025;
 }
 
+body {
+  background-color: var(--background-color);
+}
+
 /* Header */
 
 header {
@@ -112,7 +116,6 @@ header .wrapper .profile-btn i {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--background-color);
 
   padding: 130px 40px 0;
 }
