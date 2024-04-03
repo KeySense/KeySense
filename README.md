@@ -37,7 +37,9 @@ KeySense is a freely available, open-source software crafted during our limited 
 
 ## Contributors
 
-[![KeySense Contributors](https://contrib.rocks/image?repo=KeySense/KeySense)](https://github.com/keysense/keysense/graphs/contributors)
+<a href="https://github.com/keysense/keysense/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=keysense/keysense" />
+</a>
 
 ## License
 
