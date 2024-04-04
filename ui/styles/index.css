@@ -2,9 +2,18 @@
   --header-color: #ffffff;
   --background-color: #ededed;
   --grey: #d9d9d9;
-  --dark-grey: #a9a9a9;
-  --black: #000000;
-  --black-opaccity-25: #00000025;
+  --stroke-color: #a9a9a9;
+  --icons-color: #000000;
+  --black-color-opaccity-25: #00000025;
+}
+
+.dark {
+  --header-color: #000000;
+  --background-color: #1f1f1f;
+  --grey: #434343;
+  --stroke-color: #a9a9a9;
+  --icons-color: #ffffff;
+  --black-color-opaccity-25: #00000025;
 }
 
 body {
@@ -45,7 +54,7 @@ header .wrapper #switch {
 header .wrapper #switch button {
   width: 24px;
   height: 24px;
-  background-color: var(--black);
+  background-color: var(--icons-color);
   border: none;
   border-radius: 50%;
 
@@ -120,13 +129,18 @@ header .wrapper .profile-btn i {
   padding: 130px 40px 0;
 }
 
+.content a {
+  text-decoration: none;
+  color: var(--icons-color);
+}
+
 .content .box {
   width: 200px;
   height: 200px;
   background-color: var(--grey);
   border-radius: 16px;
-  box-shadow: 0 4px 4px var(--black-opaccity-25);
-  border: 1px solid var(--dark-grey);
+  box-shadow: 0 4px 4px var(--icons-color-opaccity-25);
+  border: 1px solid var(--stroke-color);
   padding: 34px 0;
   font-weight: 600;
   font-size: 18px;
@@ -142,11 +156,11 @@ header .wrapper .profile-btn i {
 .content .box:hover {
   cursor: pointer;
   scale: 1.05;
-  box-shadow: 0 6px 6px var(--black-opaccity-25);
+  box-shadow: 0 6px 6px var(--icons-color-opaccity-25);
 }
 
 .content .box .wrapper {
-  width: 48px;
+  width: 66px;
 }
 
 .content .box .wrapper img {
@@ -158,6 +172,18 @@ header .wrapper .profile-btn i {
 .content .box .wrapper i {
   position: absolute;
   font-size: 90px;
+}
+
+.content .box i {
+  font-size: 90px;
+}
+
+.content .box .wrapper .upload-icon,
+.content .box .wrapper .download-icon {
+  font-size: 40px;
+  color: var(--header-color);
+  position: absolute;
+  margin: 38px 14px 14px 14px;
 }
 
 /* Footer */
@@ -172,7 +198,7 @@ footer {
 
 footer a {
   text-decoration: none;
-  color: var(--black);
+  color: var(--icons-color);
 }
 
 footer i {
