@@ -135,15 +135,48 @@ header .wrapper .profile-btn i {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  transition: scale 0.5s, box-shadow 0.5s;
 }
 
 .content .box:hover {
   cursor: pointer;
   scale: 1.05;
+  box-shadow: 0 6px 6px var(--black-opaccity-25);
 }
 
-.content .box i {
+.content .box .wrapper {
+  width: 48px;
+}
+
+.content .box .wrapper img {
+  position: absolute;
+  margin: 34px 0 0 10px;
+  width: 48px;
+}
+
+.content .box .wrapper i {
+  position: absolute;
   font-size: 90px;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  padding: 130px 10px 0 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+footer i {
+  margin: 0 5px 5px 0;
 }
 
 /* animations */
