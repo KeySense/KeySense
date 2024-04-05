@@ -1,4 +1,5 @@
-![KeySense logo](https://raw.githubusercontent.com/KeySense/KeySense/master/img/KeySenseFullWithoutBg.png)
+<img src="https://raw.githubusercontent.com/KeySense/KeySense/master/img/KeySenseFullWithoutBg.png" style="background-color: #fff" alt="KeySense logo"/>
+<!-- ![KeySense logo](https://raw.githubusercontent.com/KeySense/KeySense/master/img/KeySenseFullWithoutBg.png) -->
 
 > KeySense is a Python-based text and scripting replacer with its own interpreter language, compatible with various language encodings.
 
