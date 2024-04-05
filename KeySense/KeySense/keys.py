@@ -12,10 +12,10 @@ from .utils.langs import sense_es_la1, sense_pt_br, sense_lan, hotkey_lan
 class KeyboardSense:
 
     def __init__(self, scripts_path=None):
-        self.KeySense = Path(__file__).parents[1]
 
         # Scripts
         if scripts_path is None:
+            self.KeySense = Path(__file__).parents[1]
             scripts_path = self.KeySense / "Script.yml"
 
         with open(scripts_path, "r", encoding="utf-8") as scripts:
