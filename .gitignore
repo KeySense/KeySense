@@ -38,3 +38,6 @@ venv.bak/
 
 # pyenv
 .python-version
+
+# node-modules global
+node_modules/
