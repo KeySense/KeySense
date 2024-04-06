@@ -1,12 +1,13 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- CSS -->
-    <link link rel="stylesheet" href="./styles/reset.css" />
-    <link link rel="stylesheet" href="./styles/index.css" />
+    <link link rel="stylesheet" href="./styles/reset.css" type="text/css" />
+    <link link rel="stylesheet" href="./styles/index.css" type="text/css" />
+    <link rel="stylesheet" href="styles/vars.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,11 +16,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-
-    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body>
-    <main class="">
+    <main>
       <header>
         <img
           src="https://raw.githubusercontent.com/KeySense/KeySense/dev/img/KeySenseFullWithoutBg.png"
@@ -28,7 +28,7 @@
 
         <div class="wrapper">
           <div class="switch-wrapper">
-            <div id="switch" onclick="toggleMode()">
+            <div id="switch">
               <button></button>
               <span></span>
             </div>
@@ -42,49 +42,48 @@
       </header>
 
       <div class="content">
-        <a href="./my_scripts.html">
-          <div class="box">
-            <div class="wrapper">
-              <i class="fa-solid fa-file"></i>
-              <img
-                src="https://raw.githubusercontent.com/KeySense/KeySense/dev/img/KeySenseLogoWithouBg.png"
-                alt="Logo da KeySense"
-              />
+        
+          <a href="my_scripts.html">
+            <div class="box" >
+              <i class="bi bi-file-earmark-code"></i>
+              <p>My Scripts</p>
             </div>
-            <p>My Scripts</p>
+          </a>
+
+        <label for="file-upload" class="custom-file-upload">
+            <div class="box">
+              <i class="bi bi-file-earmark-arrow-up"></i>
+              <p>Upload</p>
+            </div>
+        </label>
+        <input id="file-upload" type="file" style="display: none;" />
+        
+        <a href="dowload.html">
+          <div class="box">
+            <i class="bi bi-file-earmark-arrow-down"></i>
+            <p>Download</p>
           </div>
         </a>
-        <div class="box">
-          <div class="wrapper">
-            <i class="fa-solid fa-file"></i>
-            <i class="fa-solid fa-upload upload-icon"></i>
+        
+        <a href="my_templates.html">
+          <div class="box">
+            <i class="bi bi-collection"></i>
+            <p>My Templates</p>
           </div>
-          <p>Upload</p>
-        </div>
-        <div class="box">
-          <div class="wrapper">
-            <i class="fa-solid fa-file"></i>
-            <i class="fa-solid fa-download download-icon"></i>
+        </a>
+
+        <a href="settings.html">
+          <div class="box">
+            <i class="bi bi-gear"></i>
+            <p>Settings</p>
           </div>
-          <p>Download</p>
-        </div>
-        <div class="box">
-          <i class="fa-solid fa-boxes-stacked"></i>
-          <p>My Templates</p>
-        </div>
-        <div class="box">
-          <i class="fa-solid fa-gear"></i>
-          <p>Settings</p>
-        </div>
+        </a>
       </div>
 
-      <footer>
+      <!-- <footer>
         <i class="fa-solid fa-mug-hot"></i>
-        <!-- ISSO AQUI NAO ESTA REDIRECIONANDO PARA UMA PÁGINA NA WEB E NAO SEI O MOTIVO -->
-        <a href="https://www.paypal.me/ILIAMFTW" target="_blank"
-          >Buy me a coffee</a
-        >
-      </footer>
+        <p>Buy me a coffee</p>
+      </footer> -->
     </main>
 
     <!-- Font Awesome Icons -->

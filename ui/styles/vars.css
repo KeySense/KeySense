@@ -1,0 +1,21 @@
+:root {
+    --header-color: #ffffff;
+    --background-color: #ededed;
+    --grey: #d9d9d9;
+    --stroke-color: #a9a9a9;
+    --icons-color: #000000;
+    --black-color-opaccity-25: #00000025;
+  }
+  
+  .dark {
+    --header-color: #000000;
+    --background-color: #1f1f1f;
+    --grey: #434343;
+    --stroke-color: #a9a9a9;
+    --icons-color: #ffffff;
+    --black-color-opaccity-25: #00000025;
+  }
+
+  .titles{
+    --title-page-color:
+  }
