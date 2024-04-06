@@ -1,23 +1,7 @@
-:root {
-  --header-color: #ffffff;
-  --background-color: #ededed;
-  --grey: #d9d9d9;
-  --stroke-color: #a9a9a9;
-  --icons-color: #000000;
-  --black-color-opaccity-25: #00000025;
-}
-
-.dark {
-  --header-color: #000000;
-  --background-color: #1f1f1f;
-  --grey: #434343;
-  --stroke-color: #a9a9a9;
-  --icons-color: #ffffff;
-  --black-color-opaccity-25: #00000025;
-}
 
 body {
   background-color: var(--background-color);
+  max-width: 1280px 600px;
 }
 
 /* Header */
@@ -116,6 +100,10 @@ header .wrapper .profile-btn {
 
 header .wrapper .profile-btn i {
   font-size: 25px;
+  transition: 0.3s;
+}
+header .wrapper .profile-btn i:hover {
+  color: #434343;
 }
 
 /* Content */
@@ -144,6 +132,8 @@ header .wrapper .profile-btn i {
   padding: 34px 0;
   font-weight: 600;
   font-size: 18px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+
 
   display: flex;
   flex-direction: column;
@@ -178,17 +168,21 @@ header .wrapper .profile-btn i {
   font-size: 90px;
 }
 
-.content .box .wrapper .upload-icon,
+/* .content .box .wrapper .upload-icon,
 .content .box .wrapper .download-icon {
   font-size: 40px;
   color: var(--header-color);
   position: absolute;
   margin: 38px 14px 14px 14px;
+} */
+
+.custom-file-upload:hover {
+  background-color: #ddd;
 }
 
 /* Footer */
 
-footer {
+/* footer {
   display: flex;
   flex-direction: row;
   justify-content: end;
@@ -203,7 +197,7 @@ footer a {
 
 footer i {
   margin: 0 5px 5px 0;
-}
+} */
 
 /* animations */
 
