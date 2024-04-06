@@ -6,7 +6,7 @@
 
     <!-- CSS -->
     <link link rel="stylesheet" href="./styles/reset.css" />
-    <link link rel="stylesheet" href="./styles/global.css" />
+    <link link rel="stylesheet" href="./styles/index.css" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,9 +15,11 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <script src="./index.js" defer></script>
   </head>
   <body>
-    <main>
+    <main class="">
       <header>
         <img
           src="https://raw.githubusercontent.com/KeySense/KeySense/dev/img/KeySenseFullWithoutBg.png"
@@ -26,7 +28,7 @@
 
         <div class="wrapper">
           <div class="switch-wrapper">
-            <div id="switch">
+            <div id="switch" onclick="toggleMode()">
               <button></button>
               <span></span>
             </div>
@@ -40,16 +42,30 @@
       </header>
 
       <div class="content">
+        <a href="./my_scripts.html">
+          <div class="box">
+            <div class="wrapper">
+              <i class="fa-solid fa-file"></i>
+              <img
+                src="https://raw.githubusercontent.com/KeySense/KeySense/dev/img/KeySenseLogoWithouBg.png"
+                alt="Logo da KeySense"
+              />
+            </div>
+            <p>My Scripts</p>
+          </div>
+        </a>
         <div class="box">
-          <i class="fa-solid fa-file"></i>
-          <p>My Scripts</p>
-        </div>
-        <div class="box">
-          <i class="fa-solid fa-file"></i>
+          <div class="wrapper">
+            <i class="fa-solid fa-file"></i>
+            <i class="fa-solid fa-upload upload-icon"></i>
+          </div>
           <p>Upload</p>
         </div>
         <div class="box">
-          <i class="fa-solid fa-file"></i>
+          <div class="wrapper">
+            <i class="fa-solid fa-file"></i>
+            <i class="fa-solid fa-download download-icon"></i>
+          </div>
           <p>Download</p>
         </div>
         <div class="box">
@@ -64,7 +80,10 @@
 
       <footer>
         <i class="fa-solid fa-mug-hot"></i>
-        <p>Buy me a coffee</p>
+        <!-- ISSO AQUI NAO ESTA REDIRECIONANDO PARA UMA PÁGINA NA WEB E NAO SEI O MOTIVO -->
+        <a href="https://www.paypal.me/ILIAMFTW" target="_blank"
+          >Buy me a coffee</a
+        >
       </footer>
     </main>
 
