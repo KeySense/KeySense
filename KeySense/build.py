@@ -48,7 +48,7 @@ def remove_built():
 def keysense_built():
 
     global build_dir, dist_dir, build
-    build_dir, dist_dir, build = "./build/", "./dist/", "./main.spec"
+    build_dir, dist_dir, build = "./build/", "./dist/", "./KeySense.spec"
 
     return (
         os.path.exists(build_dir) or os.path.exists(dist_dir) or os.path.exists(build)
